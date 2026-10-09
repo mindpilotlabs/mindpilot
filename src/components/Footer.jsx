@@ -35,7 +35,7 @@ export default function Footer({ setActiveTab }) {
               <img 
                 src={logoImage} 
                 alt="MindPilot Logo" 
-                className="h-24 sm:h-28 lg:h-32 w-auto object-contain bg-white/10 p-2.5 rounded-2xl border border-white/15 backdrop-blur-md transition-transform group-hover:scale-105 filter drop-shadow-lg" 
+                className="h-24 sm:h-28 lg:h-32 w-auto object-contain transition-transform group-hover:scale-105 filter drop-shadow-md" 
               />
             </div>
             
