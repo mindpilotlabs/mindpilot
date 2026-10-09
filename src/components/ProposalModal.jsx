@@ -10,6 +10,7 @@ import {
   Building2,
   ShieldCheck
 } from 'lucide-react';
+import logoImage from '../assets/logo.png';
 import { MIND_PILOT_INFO } from '../data/mindpilotData';
 
 export default function ProposalModal({ isOpen, onClose, proposalData }) {
@@ -43,7 +44,7 @@ export default function ProposalModal({ isOpen, onClose, proposalData }) {
 
         {/* Modal Header */}
         <div className="flex items-center gap-4 border-b border-slate-100 pb-5">
-          <img src="/logo.png" alt="MindPilot Logo" className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-sm" />
+          <img src={logoImage} alt="MindPilot Logo" className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-sm" />
           <div>
             <span className="text-[10px] font-extrabold text-indigo-700 uppercase tracking-widest block">OFFICIAL INSTITUTIONAL OUTLINE</span>
             <h2 className="text-xl sm:text-2xl font-heading font-black text-slate-900">Customized School Partnership Scope</h2>

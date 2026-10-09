@@ -9,6 +9,7 @@ import {
   ArrowUp,
   BookOpen
 } from 'lucide-react';
+import logoImage from '../assets/logo.png';
 import { MIND_PILOT_INFO } from '../data/mindpilotData';
 
 export default function Footer({ setActiveTab }) {
@@ -32,7 +33,7 @@ export default function Footer({ setActiveTab }) {
           <div className="lg:col-span-4 space-y-5">
             <div className="flex items-center gap-3 cursor-pointer group" onClick={() => handleNavClick('home')}>
               <img 
-                src="/logo.png" 
+                src={logoImage} 
                 alt="MindPilot Logo" 
                 className="h-24 sm:h-28 lg:h-32 w-auto object-contain bg-white/10 p-2.5 rounded-2xl border border-white/15 backdrop-blur-md transition-transform group-hover:scale-105 filter drop-shadow-lg" 
               />
