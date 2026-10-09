@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import ExecutiveOverview from './components/ExecutiveOverview';
+import AboutProgram from './components/AboutProgram';
 import CurriculumExplorer from './components/CurriculumExplorer';
+import SchoolPartnerships from './components/SchoolPartnerships';
 import StudentAILab from './components/StudentAILab';
+import TeachersParents from './components/TeachersParents';
 import ImpactAnalytics from './components/ImpactAnalytics';
-import PartnershipCalculator from './components/PartnershipCalculator';
-import BeyondClassroom from './components/BeyondClassroom';
+import ResponsibleAIPage from './components/ResponsibleAIPage';
+import FAQSection from './components/FAQSection';
+import ContactPage from './components/ContactPage';
+import ResourcesPage from './components/ResourcesPage';
 import ProposalModal from './components/ProposalModal';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('home');
   const [labPrompt, setLabPrompt] = useState('');
   const [isProposalModalOpen, setIsProposalModalOpen] = useState(false);
   const [proposalData, setProposalData] = useState({
@@ -27,24 +31,26 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans selection:bg-indigo-600 selection:text-white">
       
-      {/* Top Header */}
+      {/* Top Sticky Header */}
       <Header 
         activeTab={activeTab} 
         setActiveTab={setActiveTab} 
         openProposalModal={openProposalModal}
       />
 
-      {/* Main Content Area based on selected Tab */}
+      {/* Main Content Router */}
       <main className="flex-1">
-        {activeTab === 'overview' && (
-          <>
-            <HeroSection 
-              setActiveTab={setActiveTab} 
-              openProposalModal={openProposalModal}
-            />
-            <ExecutiveOverview setActiveTab={setActiveTab} />
-            <BeyondClassroom />
-          </>
+        {activeTab === 'home' && (
+          <HeroSection 
+            setActiveTab={setActiveTab} 
+            openProposalModal={openProposalModal}
+          />
+        )}
+
+        {activeTab === 'program' && (
+          <AboutProgram 
+            setActiveTab={setActiveTab} 
+          />
         )}
 
         {activeTab === 'curriculum' && (
@@ -54,23 +60,55 @@ export default function App() {
           />
         )}
 
-        {activeTab === 'ailab' && (
-          <StudentAILab initialPrompt={labPrompt} />
+        {activeTab === 'schools' && (
+          <SchoolPartnerships 
+            setActiveTab={setActiveTab} 
+            openProposalModal={openProposalModal}
+          />
+        )}
+
+        {activeTab === 'students' && (
+          <StudentAILab 
+            initialPrompt={labPrompt} 
+          />
+        )}
+
+        {activeTab === 'teachers-parents' && (
+          <TeachersParents 
+            setActiveTab={setActiveTab} 
+          />
         )}
 
         {activeTab === 'impact' && (
-          <ImpactAnalytics setActiveTab={setActiveTab} />
+          <ImpactAnalytics 
+            setActiveTab={setActiveTab} 
+          />
         )}
 
-        {activeTab === 'calculator' && (
-          <PartnershipCalculator 
-            openProposalModal={openProposalModal}
-            setProposalData={setProposalData}
+        {activeTab === 'responsible-ai' && (
+          <ResponsibleAIPage 
+            setActiveTab={setActiveTab} 
+          />
+        )}
+
+        {activeTab === 'faq' && (
+          <FAQSection 
+            setActiveTab={setActiveTab} 
+          />
+        )}
+
+        {activeTab === 'contact' && (
+          <ContactPage />
+        )}
+
+        {activeTab === 'resources' && (
+          <ResourcesPage 
+            setActiveTab={setActiveTab} 
           />
         )}
       </main>
 
-      {/* Proposal Modal Exporter */}
+      {/* Proposal Scope Modal */}
       <ProposalModal 
         isOpen={isProposalModalOpen}
         onClose={closeProposalModal}

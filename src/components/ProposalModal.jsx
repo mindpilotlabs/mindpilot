@@ -2,229 +2,122 @@ import React from 'react';
 import { 
   X, 
   Printer, 
-  Download, 
   CheckCircle2, 
-  ShieldCheck, 
   School, 
-  Mail, 
-  Phone, 
+  Users, 
   MapPin, 
-  Calendar,
-  Award,
-  Sparkles,
   FileCheck,
-  Building2
+  Building2,
+  ShieldCheck
 } from 'lucide-react';
-import { MIND_PILOT_INFO, RESPONSIBILITIES, CORE_QUOTE } from '../data/mindpilotData';
+import { MIND_PILOT_INFO } from '../data/mindpilotData';
 
 export default function ProposalModal({ isOpen, onClose, proposalData }) {
   if (!isOpen) return null;
 
-  const school = proposalData?.schoolName || "Partner Institution";
-  const students = proposalData?.studentCount || 150;
-  const planTier = proposalData?.planTier || "Premier Campus Plan";
-  const grades = proposalData?.selectedGrades || ['Grades 6–8', 'Grades 9–10'];
-  const facilitationModel = proposalData?.facilitationModel === 'blended' ? 'Blended Facilitation' : 'MindPilot Certified Trainer-Led';
+  const {
+    schoolName = 'Partner School',
+    studentCount = 150,
+    selectedGrades = ['Grades 6–8', 'Grades 9–10'],
+    planTier = 'Premier Campus Plan',
+    facilitationModel = 'trainer-led',
+    estimatedHours = 48
+  } = proposalData || {};
 
   const handlePrint = () => {
     window.print();
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md overflow-y-auto">
-      
-      {/* Modal Container */}
-      <div className="relative w-full max-w-4xl bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col text-slate-900">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-fade-in">
+      <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 shadow-2xl space-y-6 p-6 sm:p-8 relative animate-slide-up">
         
-        {/* Top Control Bar (Hidden when printing) */}
-        <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between no-print shrink-0">
-          <div className="flex items-center gap-2 text-xs font-bold text-indigo-700">
-            <School className="w-4 h-4 text-indigo-600" />
-            <span>MindPilot Official School Partnership Proposal</span>
-          </div>
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors"
+          aria-label="Close Modal"
+        >
+          <X className="w-5 h-5" />
+        </button>
 
-          <div className="flex items-center gap-3">
-            <button
-              onClick={handlePrint}
-              className="flex items-center gap-2 px-4 py-1.5 rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-600 hover:to-indigo-700 text-white font-extrabold text-xs shadow-md transition-all"
-            >
-              <Printer className="w-4 h-4" />
-              <span>Print / Save PDF</span>
-            </button>
-
-            <button
-              onClick={onClose}
-              className="p-1.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 hover:text-slate-900 transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
+        {/* Modal Header */}
+        <div className="flex items-center gap-4 border-b border-slate-100 pb-5">
+          <img src="/logo.png" alt="MindPilot Logo" className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-sm" />
+          <div>
+            <span className="text-[10px] font-extrabold text-indigo-700 uppercase tracking-widest block">OFFICIAL INSTITUTIONAL OUTLINE</span>
+            <h2 className="text-xl sm:text-2xl font-heading font-black text-slate-900">Customized School Partnership Scope</h2>
           </div>
         </div>
 
-        {/* Scrollable Printable Document Content */}
-        <div className="p-8 sm:p-12 overflow-y-auto space-y-8 bg-white text-slate-900 print-only font-sans">
-          
-          {/* Proposal Document Header */}
-          <div className="border-b border-slate-200 pb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+        {/* Summary Card */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-medium text-slate-700">
             <div>
-              <img 
-                src="/logo.png" 
-                alt="MindPilot Logo" 
-                className="h-18 sm:h-24 w-auto object-contain filter drop-shadow-xs" 
-              />
+              <span className="text-[10px] font-bold text-slate-400 uppercase block">TARGET INSTITUTION:</span>
+              <p className="text-sm font-bold text-slate-900">{schoolName}</p>
             </div>
-
-            <div className="text-left sm:text-right space-y-1">
-              <span className="text-xs font-black text-pink-600 uppercase tracking-widest block">
-                OFFICIAL INSTITUTIONAL PROPOSAL
-              </span>
-              <h2 className="text-xl font-heading font-black text-slate-900">
-                {MIND_PILOT_INFO.programName}
-              </h2>
+            <div>
+              <span className="text-[10px] font-bold text-slate-400 uppercase block">PARTICIPATING STUDENTS:</span>
+              <p className="text-sm font-bold text-indigo-700">{studentCount} Students</p>
             </div>
-          </div>
-
-          {/* Prepared For Banner */}
-          <div className="p-6 rounded-2xl bg-indigo-50/80 border border-indigo-200 flex flex-wrap justify-between items-center gap-4">
-            <div className="space-y-1">
-              <span className="text-[10px] text-indigo-800 font-extrabold uppercase tracking-wider">PREPARED EXCLUSIVELY FOR</span>
-              <h3 className="text-2xl font-heading font-black text-slate-900">{school}</h3>
-              <p className="text-xs text-slate-600 font-medium">{students} Enrolled Students • Mode: {facilitationModel}</p>
+            <div>
+              <span className="text-[10px] font-bold text-slate-400 uppercase block">GRADE BANDS:</span>
+              <p className="text-sm font-bold text-slate-900">{Array.isArray(selectedGrades) ? selectedGrades.join(', ') : selectedGrades}</p>
             </div>
-
-            <div className="text-left sm:text-right space-y-1">
-              <span className="text-[10px] text-pink-700 font-extrabold uppercase tracking-wider block">SELECTED PLAN TIER</span>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-pink-100 border border-pink-300 text-pink-900 text-xs font-extrabold">
-                <Sparkles className="w-3.5 h-3.5 text-pink-600" />
-                <span>{planTier}</span>
-              </div>
-              <p className="text-xs text-slate-600 font-medium">{grades.join(', ')}</p>
+            <div>
+              <span className="text-[10px] font-bold text-slate-400 uppercase block">ACADEMIC YEAR:</span>
+              <p className="text-sm font-bold text-slate-900">{MIND_PILOT_INFO.academicYear}</p>
             </div>
           </div>
+        </div>
 
-          {/* Vision Statement Quote */}
-          <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 italic text-slate-800 text-sm font-medium">
-            "{CORE_QUOTE.main}"
+        {/* Inclusions Matrix */}
+        <div className="space-y-3">
+          <h3 className="text-sm font-heading font-bold text-slate-900 uppercase tracking-wider">Scope & Deliverables Summary</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-700 font-medium">
+            {[
+              "8 Structured Curriculum Modules",
+              "12-Week Timetable Adaptability",
+              "Certified Facilitators / Master Content",
+              "Baseline & Post-Program Assessments",
+              "Prompt Engineering & Hallucination Labs",
+              "Student Completion Certificates",
+              "Teacher Orientation & Usage Guidelines",
+              "Parent Awareness Communication Sheets"
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* Program Overview & Objectives */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-extrabold text-indigo-700 uppercase tracking-wider">
-              1. Executive Summary & Program Objectives
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-              The MindPilot AI Readiness & Responsible Technology Program equips students with age-appropriate AI literacy, prompt engineering skills, hallucination verification techniques, and ethical technology habits. Rather than promoting passive overdependence, the program fosters independent critical thinking and academic integrity.
-            </p>
-          </div>
+        {/* Commercial Terms Notice */}
+        <div className="glass-panel p-4 rounded-xl border border-indigo-200 bg-indigo-50/60 text-xs text-slate-700 leading-relaxed font-medium">
+          <strong className="text-indigo-900">Commercial Terms Notice:</strong> Program scope and commercial terms are discussed directly with each institution. The final proposal is customized according to student strength, grade levels, delivery format, timetable, and agreed services.
+        </div>
 
-          {/* Responsibilities Matrix */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-extrabold text-indigo-700 uppercase tracking-wider">
-              2. Roles & Delivery Framework
-            </h4>
+        {/* Modal Actions */}
+        <div className="flex flex-col sm:flex-row items-center justify-end gap-3 pt-4 border-t border-slate-100">
+          <button
+            onClick={handlePrint}
+            className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all flex items-center justify-center gap-2"
+          >
+            <Printer className="w-4 h-4 text-slate-600" />
+            <span>Print Scope Summary</span>
+          </button>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-                <span className="font-extrabold text-slate-900 uppercase block">School Provides:</span>
-                <ul className="space-y-1.5 text-slate-700 font-medium">
-                  {RESPONSIBILITIES.school.map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-                <span className="font-extrabold text-slate-900 uppercase block">Program Team Provides:</span>
-                <ul className="space-y-1.5 text-slate-700 font-medium">
-                  {RESPONSIBILITIES.programTeam.slice(0, 5).map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Commercial Partnership & Institutional Scope */}
-          <div className="space-y-3">
-            <h4 className="text-sm font-extrabold text-indigo-700 uppercase tracking-wider">
-              3. Commercial Partnership & Institutional Scope
-            </h4>
-
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center border-b border-slate-200 pb-4">
-                <div>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase block">COHORT STRENGTH</span>
-                  <span className="text-base font-black text-slate-900 mt-1 block">{students} Enrolled Students</span>
-                </div>
-
-                <div>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase block">RECOMMENDED TIER</span>
-                  <span className="text-base font-black text-indigo-700 mt-1 block">{planTier}</span>
-                </div>
-
-                <div>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase block">PRICING STRUCTURE</span>
-                  <span className="text-base font-black text-emerald-700 mt-1 block">Custom Institutional Rate</span>
-                </div>
-              </div>
-
-              <div className="space-y-2 text-xs text-slate-700 font-medium">
-                <div className="flex items-center gap-2">
-                  <FileCheck className="w-4 h-4 text-indigo-600 shrink-0" />
-                  <span>Includes complete 12-week printed student workbooks and digital learning kits.</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FileCheck className="w-4 h-4 text-indigo-600 shrink-0" />
-                  <span>Volume tier discounts applied for cohort strength exceeding 100+ students.</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FileCheck className="w-4 h-4 text-indigo-600 shrink-0" />
-                  <span>Includes Executive Impact Analytics Report for school management at program conclusion.</span>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-xl bg-indigo-50 border border-indigo-200 text-center">
-                <p className="text-xs text-indigo-900 font-semibold">
-                  To finalize commercial quotation terms, custom volume tier discounts, or schedule an inaugural school briefing, please contact executive leadership below.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact & Next Steps Footer */}
-          <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
-            <div className="space-y-1">
-              <span className="text-xs font-bold text-indigo-700 uppercase">Executive Partnership Contact</span>
-              <h5 className="text-base font-black text-slate-900">{MIND_PILOT_INFO.contact.ceo}</h5>
-              <p className="text-xs text-slate-600 font-medium">{MIND_PILOT_INFO.contact.role}, MindPilot Education</p>
-            </div>
-
-            <div className="text-xs text-slate-700 font-medium space-y-1">
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-indigo-600" />
-                <a href={`tel:${MIND_PILOT_INFO.contact.phone}`} className="hover:text-indigo-600">{MIND_PILOT_INFO.contact.phone}</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-indigo-600" />
-                <a href={`mailto:${MIND_PILOT_INFO.contact.email}`} className="hover:text-indigo-600">{MIND_PILOT_INFO.contact.email}</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-indigo-600" />
-                <span>{MIND_PILOT_INFO.contact.location}</span>
-              </div>
-            </div>
-          </div>
-
+          <button
+            onClick={onClose}
+            className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-extrabold transition-all"
+          >
+            Close Window
+          </button>
         </div>
 
       </div>
-
     </div>
   );
 }

@@ -1,276 +1,336 @@
 export const MIND_PILOT_INFO = {
   programName: "AI Readiness & Responsible Technology Program",
-  tagline: "Preparing Students to Think, Learn, Create and Solve Problems in the Age of AI",
-  mission: "Building AI-literate students who know how to use AI without becoming dependent on it.",
+  tagline: "Think Beyond. Learn with AI. Build the Future.",
+  mission: "Helping schools develop students who can think critically, learn effectively, question intelligently, and use artificial intelligence responsibly.",
+  conciseStatement: "AI is changing how we learn, research, create, and solve problems. Students need more than access to AI tools. They need the judgment and skills to use them well.",
   academicYear: "2026–27",
-  company: "MindPilot",
-  motto: "AI TEACHING. REAL LEARNING.",
+  company: "MindPilot Education",
+  motto: "BUILDING AI-LITERATE, INDEPENDENT THINKERS",
+  primaryMarket: "Visakhapatnam, Andhra Pradesh, India",
+  expansionStrategy: "Establish successful school partnerships in Visakhapatnam first, develop a strong reputation and evidence of student outcomes, and then expand across Andhra Pradesh and other Indian cities.",
   contact: {
     ceo: "Manchala SaiKumar",
     role: "CEO & Founder",
     phone: "+91 6302088183",
     email: "mindpilotlabs@gmail.com",
-    location: "Visakhapatnam, Andhra Pradesh",
+    location: "Visakhapatnam, Andhra Pradesh, India",
   }
 };
 
 export const CORE_QUOTE = {
-  main: "The goal is not to teach students to depend on AI. The goal is to teach them how to think better with AI.",
-  assistant: "AI should be a student's assistant — not the student's replacement."
+  main: "Access to AI is not the same as AI readiness.",
+  sub: "AI should support learning, not replace learning. Students should question answers, not blindly trust them."
 };
-
-export const EIGHT_GUIDANCE_AREAS = [
-  { id: 1, title: "Asking meaningful questions", desc: "Formulating precise, context-aware queries that yield high-value insights.", icon: "HelpCircle" },
-  { id: 2, title: "Understanding AI limitations", desc: "Recognizing that AI models lack true consciousness, real-time awareness, and emotional nuance.", icon: "AlertTriangle" },
-  { id: 3, title: "Verifying information", desc: "Cross-referencing AI outputs against primary authoritative sources.", icon: "ShieldCheck" },
-  { id: 4, title: "Distinguishing facts from generated content", desc: "Identifying hallucinations, synthetic bias, and unverified narrative claims.", icon: "Eye" },
-  { id: 5, title: "Using AI without replacing own thinking", desc: "Treating AI as a sounding board while maintaining primary analytical ownership.", icon: "Brain" },
-  { id: 6, title: "Protecting personal information", desc: "Safeguarding PII, passwords, sensitive academic data, and privacy rights.", icon: "Lock" },
-  { id: 7, title: "Maintaining academic integrity", desc: "Ethical attribution, honest submission, and adhering to institutional honor codes.", icon: "BookOpen" },
-  { id: 8, title: "Using technology responsibly", desc: "Fostering balanced digital health, respectful communication, and ethical technology habits.", icon: "HeartHandshake" }
-];
-
-export const EVOLUTION_STAGES = [
-  { step: 1, title: "Traditional Learning", subtitle: "Textbooks & classroom instruction", color: "from-slate-700 to-slate-800" },
-  { step: 2, title: "Internet Learning", subtitle: "Search engines & educational websites", color: "from-blue-900 to-slate-800" },
-  { step: 3, title: "Digital Learning", subtitle: "Devices, LMS platforms & online media", color: "from-indigo-900 to-blue-900" },
-  { step: 4, title: "AI-Assisted Learning", subtitle: "Generative AI tools & virtual tutors", color: "from-violet-900 to-indigo-900" },
-  { step: 5, title: "AI-Native Learning", subtitle: "AI deeply woven into daily study habits", color: "from-blue-600 to-indigo-600", highlighted: true }
-];
 
 export const FOUR_CHALLENGES = [
   {
     num: "01",
-    title: "AI-generated Misinformation",
-    desc: "Convincing but inaccurate or fabricated content is effortless to produce and rapidly shared by unsuspecting students.",
-    solution: "Taught via Week 7 & 8 Verification modules."
+    title: "Accepting AI Answers Without Verification",
+    desc: "Students often accept AI-generated text and claims at face value without checking factual accuracy or checking underlying assumptions.",
+    solution: "Addressed via Module 6: Verification & Critical Thinking."
   },
   {
     num: "02",
-    title: "Overdependence on AI",
-    desc: "Relying passively on AI responses can atrophy a student's own critical reasoning, problem-solving, and cognitive effort.",
-    solution: "Taught via Week 3 Decomposition & Week 5 AI for Learning."
+    title: "Using AI to Complete Work Without Understanding",
+    desc: "Using generative AI tools to generate full assignments leads to surface-level completion with zero genuine cognitive retention.",
+    solution: "Addressed via Module 3 & Module 5: Socratic Learning."
   },
   {
     num: "03",
-    title: "Copy-Paste Learning",
-    desc: "Raw AI answers are blindly copied into assignments without being read, comprehended, or critically questioned.",
-    solution: "Taught via Week 4 Prompting & Ethics protocols."
+    title: "Distinguishing Reliable Info from Misinformation",
+    desc: "Synthetic text, hallucinations, and deepfake content blur the boundary between verified facts and plausible falsehoods.",
+    solution: "Addressed via Module 2 & Module 7: Source Auditing."
   },
   {
     num: "04",
-    title: "Lack of Verification & Ethics",
-    desc: "Original sources, student data privacy, and academic integrity policies are rarely considered during AI interaction.",
-    solution: "Taught via Week 6 Research & Week 9 Responsible Use."
+    title: "Lack of Awareness of Privacy & Ethics",
+    desc: "Students routinely upload personal data, confidential homework, and family information into online AI models without privacy awareness.",
+    solution: "Addressed via Module 7: Responsible AI & Digital Safety."
   }
 ];
 
-export const PROGRESION_STAGES = [
-  { step: 1, title: "AI Awareness", desc: "Recognising where AI appears in daily life" },
-  { step: 2, title: "AI Understanding", desc: "Knowing, at an age-appropriate level, how AI works" },
-  { step: 3, title: "Better Questioning", desc: "Communicating clearly and with purpose" },
-  { step: 4, title: "AI-Assisted Learning", desc: "Using AI to understand, practice and explore" },
-  { step: 5, title: "Verification & Critical Thinking", desc: "Checking facts, sources and assumptions" },
-  { step: 6, title: "Responsible Usage", desc: "Privacy, Ethics and Academic integrity" },
-  { step: 7, title: "Real-World Projects", desc: "Applying skills to practical problems" }
+export const FIVE_PILLARS = [
+  { id: 1, title: "Understand AI", desc: "Know how AI works, where it is used, and what its limitations are at an age-appropriate level.", icon: "Brain" },
+  { id: 2, title: "Ask Better Questions", desc: "Master effective prompt structure, context framing, and Socratic inquiry styles.", icon: "MessageSquare" },
+  { id: 3, title: "Verify Information", desc: "Detect synthetic hallucinations, cross-check claims, and validate primary sources.", icon: "ShieldCheck" },
+  { id: 4, title: "Solve Problems", desc: "Decompose complex assignments into structured, logical, step-by-step solutions.", icon: "Workflow" },
+  { id: 5, title: "Create Responsibly", desc: "Use AI as a creative brainstorming co-pilot while preserving personal originality and academic integrity.", icon: "Sparkles" }
+];
+
+export const SIX_STAGE_FRAMEWORK = [
+  { step: 1, title: "Awareness", desc: "Spotting AI in daily life and understanding its presence in education and media." },
+  { step: 2, title: "Understanding", desc: "Learning age-appropriate mechanics of data, training patterns, and model limits." },
+  { step: 3, title: "Questioning", desc: "Structuring precise prompts and asking critical clarifying questions." },
+  { step: 4, title: "Application", desc: "Using AI thoughtfully across school subjects as a study companion." },
+  { step: 5, title: "Verification", desc: "Auditing AI outputs, fact-checking claims, and detecting synthetic errors." },
+  { step: 6, title: "Creation", desc: "Applying collaborative AI workflows to build real-world team projects." }
 ];
 
 export const EIGHT_OUTCOMES = [
-  { id: "01", title: "AI Literacy", desc: "Understanding what AI is, where it is used, and how AI models operate at an age-appropriate level." },
+  { id: "01", title: "AI Literacy", desc: "Understanding what AI is, where it is used, and how machine learning models operate." },
   { id: "02", title: "Critical Thinking", desc: "Questioning information systematically rather than accepting AI-generated answers blindly." },
-  { id: "03", title: "Effective Questioning", desc: "Learning how to communicate clearly with AI systems and structure high-utility prompts." },
-  { id: "04", title: "Verification", desc: "Testing claims, validating primary sources, and detecting synthetic hallucinations." },
-  { id: "05", title: "Responsible AI", desc: "Navigating privacy, ethics, academic honor codes, bias, and digital safety." },
-  { id: "06", title: "Problem Solving", desc: "Decomposing complex real-world challenges into structured steps using smart tech." },
-  { id: "07", title: "Creativity", desc: "Using AI as a collaborative brainstorming, writing, design, and idea-development co-pilot." },
-  { id: "08", title: "Projects", desc: "Applying cumulative learning to solve genuine school, environmental, or community issues." }
+  { id: "03", title: "Research & Verification", desc: "Testing claims, validating primary sources, and detecting synthetic hallucinations." },
+  { id: "04", title: "Responsible Tech Habits", desc: "Navigating data privacy, ethics, academic honor codes, and digital safety." },
+  { id: "05", title: "Creativity", desc: "Using AI as a collaborative brainstorming, writing, and idea-development co-pilot." },
+  { id: "06", title: "Practical Problem-Solving", desc: "Decomposing complex real-world challenges into structured steps using technology." }
 ];
 
 export const GRADE_BANDS = [
   {
     band: "Grades 3–5",
-    stage: "AI Awareness",
+    stage: "Discover AI",
     recommended: false,
-    keyAreas: ["AI around us", "Patterns and logic", "Safe technology habits", "Simple problem-solving activities"],
-    description: "Foundational exposure focusing on digital safety, pattern recognition, and building positive digital habits."
+    keyAreas: ["AI around us", "Patterns and simple logic", "Digital safety basics", "Safe technology habits"],
+    description: "Foundational exposure focusing on digital safety, pattern recognition, and positive tech habits."
   },
   {
     band: "Grades 6–8",
-    stage: "AI Thinking",
+    stage: "Understand & Question AI",
     recommended: true,
-    tag: "PRIMARY TARGET",
-    keyAreas: ["AI concepts", "Asking better questions", "Problem decomposition", "Responsible AI", "Verification"],
-    description: "Core middle school target. Develops independent inquiry, critical questioning, and algorithmic reasoning."
+    tag: "RECOMMENDED INITIAL FOCUS",
+    keyAreas: ["How AI works", "Asking better questions", "Problem decomposition", "Verification basics", "Digital ethics"],
+    description: "Core middle school implementation focus. Develops independent inquiry, critical questioning, and algorithmic reasoning."
   },
   {
     band: "Grades 9–10",
-    stage: "AI Application",
+    stage: "Apply AI",
     recommended: true,
-    tag: "PRIMARY TARGET",
-    keyAreas: ["Research with AI", "Fact checking", "AI-assisted learning", "Subject applications", "Project-based learning"],
-    description: "Core high school target. Integrates AI across academic disciplines, synthesis, and structured projects."
+    tag: "RECOMMENDED INITIAL FOCUS",
+    keyAreas: ["AI for research & study", "Fact-checking & verification", "Cross-subject applications", "Responsible usage", "Team projects"],
+    description: "Core high school implementation focus. Integrates AI across academic disciplines, synthesis, and structured projects."
   },
   {
     band: "Grades 11–12",
-    stage: "AI & Future Readiness",
+    stage: "Explore Advanced Applications",
     recommended: false,
-    keyAreas: ["Advanced AI applications", "Research & Synthesis", "Productivity workflows", "Career awareness", "Responsible professional use"],
-    description: "Advanced preparation for higher education and career readiness with ethical leadership."
+    keyAreas: ["Advanced research workflows", "Ethics & societal impact", "Productivity & synthesis", "Higher ed & career readiness"],
+    description: "Advanced preparation for higher education, deep research synthesis, and ethical technology leadership."
+  }
+];
+
+export const EIGHT_CURRICULUM_MODULES = [
+  {
+    id: 1,
+    title: "MODULE 1: AI AROUND US",
+    learn: "Everyday examples of artificial intelligence in education, communication, transport, and entertainment. Difference between AI and traditional software.",
+    activity: "AI Spotter Hunt: Identify 5 everyday tools using AI algorithms vs traditional software rule-sets.",
+    outcome: "Clear distinction between automated software and statistical machine learning.",
+    ageGroup: "Grades 3–12 (Adapted by band)"
+  },
+  {
+    id: 2,
+    title: "MODULE 2: HOW AI WORKS",
+    learn: "Age-appropriate explanation of machine learning, pattern recognition, training data, predictions, and fundamental AI limitations.",
+    activity: "Model Trainer Experiment: Train a simple visual model to classify objects and observe edge-case failures.",
+    outcome: "Demystified understanding of how AI outputs are predicted rather than comprehended.",
+    ageGroup: "Grades 6–12"
+  },
+  {
+    id: 3,
+    title: "MODULE 3: THINKING AND PROBLEM DECOMPOSITION",
+    learn: "Breaking complex academic and real-world problems into smaller logical steps, pattern recognition, and designing step-by-step solutions.",
+    activity: "Decomposition Mapping: Break a complex science essay or community project into 5 structured sub-tasks.",
+    outcome: "Ability to map out complex tasks before invoking technology tools.",
+    ageGroup: "Grades 6–12"
+  },
+  {
+    id: 4,
+    title: "MODULE 4: ASKING BETTER QUESTIONS",
+    learn: "Communicating clearly with AI tools, providing rich context, refining questions, and evaluating contrasting answers.",
+    activity: "Prompt Transformation Lab: Upgrade vague 3-word queries into context-rich, Socratic inquiry prompts.",
+    outcome: "Mastery over prompt structure (Role, Task, Context, Constraints, Format).",
+    ageGroup: "Grades 6–12"
+  },
+  {
+    id: 5,
+    title: "MODULE 5: AI FOR LEARNING AND RESEARCH",
+    learn: "Using AI as a personal Socratic study assistant, generating explanations, self-quizzing, and deepening understanding rather than copying answers.",
+    activity: "Socratic Revision Partner: Use AI to explain physics concepts using analogies and generate self-test questions.",
+    outcome: "Adopting AI as a study partner that enhances personal cognitive effort.",
+    ageGroup: "Grades 6–12"
+  },
+  {
+    id: 6,
+    title: "MODULE 6: VERIFICATION AND CRITICAL THINKING",
+    learn: "Detecting incorrect AI-generated information (hallucinations), cross-checking claims, evaluating sources, and recognizing bias.",
+    activity: "Hallucination Detective: Audit an AI-generated history summary to spot hidden factual errors.",
+    outcome: "Habitual 3-step fact verification before accepting any AI assertion.",
+    ageGroup: "Grades 6–12"
+  },
+  {
+    id: 7,
+    title: "MODULE 7: RESPONSIBLE AI AND DIGITAL SAFETY",
+    learn: "Privacy, protecting personal data, academic integrity, ethics, bias, fairness, and age-appropriate tool selection.",
+    activity: "Privacy & Honor Code Audit: Evaluate sample assignment workflows against school academic integrity policies.",
+    outcome: "Strong commitment to digital safety, privacy, and honest academic work.",
+    ageGroup: "Grades 3–12"
+  },
+  {
+    id: 8,
+    title: "MODULE 8: CREATIVITY AND REAL-WORLD PROJECTS",
+    learn: "Team-based problem solving, AI-assisted ideation, practical subject-related projects, presentations, and reflecting on learning.",
+    activity: "Community Innovation Sprint: Teams design and present tech-assisted solutions to school or city challenges.",
+    outcome: "Tangible student project portfolio demonstrating critical thinking and responsible AI use.",
+    ageGroup: "Grades 6–12"
   }
 ];
 
 export const CURRICULUM_WEEKS = [
+  { week: 1, module: "Module 1", title: "AI Around Us", desc: "Everyday examples of artificial intelligence in daily life, search, and apps." },
+  { week: 2, module: "Module 2", title: "How AI Learns", desc: "Data, patterns, training data, and predictions explained simply." },
+  { week: 3, module: "Module 3", title: "Problem Decomposition", desc: "Breaking large complex problems into clear, manageable steps." },
+  { week: 4, module: "Module 4", title: "Asking Better Questions", desc: "Framing specific requests with context, constraints, and purpose." },
+  { week: 5, module: "Module 5", title: "AI for Learning", desc: "Using AI to understand, practice, and revise — not to copy." },
+  { week: 6, module: "Module 5", title: "Research with AI", desc: "Gathering and organizing information from several sources responsibly." },
+  { week: 7, module: "Module 6", title: "AI Can Be Wrong", desc: "Recognizing errors, synthetic hallucinations, and made-up information." },
+  { week: 8, module: "Module 6", title: "Verification & Fact Checking", desc: "Testing claims against reliable primary sources and lateral reading." },
+  { week: 9, module: "Module 8", title: "Creativity with AI", desc: "Brainstorming and developing original ideas collaboratively with tech." },
+  { week: 10, module: "Module 8", title: "AI & School Subjects", desc: "Applying AI thoughtfully across science, math, history, and languages." },
+  { week: 11, module: "Module 8", title: "Team Project", desc: "Student teams work on a real school, environmental, or community problem." },
+  { week: 12, module: "Module 8", title: "Student Demo & Reflection", desc: "Presenting projects and reflecting on responsible technology use." }
+];
+
+export const PARTNERSHIP_STEPS = [
   {
-    week: 1,
-    title: "AI Around Us",
-    subtitle: "Spotting AI in daily life, from search to recommendations.",
-    term: "Term 1",
-    objective: "Identify hidden AI algorithms in everyday smartphones, streaming apps, and web search engines.",
-    activity: "AI Treasure Hunt: Students log 5 interactions with AI algorithms during their day and categorize them.",
-    samplePrompt: "Explain how Spotify or YouTube recommendations work in simple terms for a 12-year-old.",
-    skills: ["AI Literacy", "Pattern Recognition"]
+    step: "01",
+    title: "Discovery",
+    desc: "Discuss the school's vision, student population, grade levels, existing infrastructure, and academic priorities."
   },
   {
-    week: 2,
-    title: "How AI Learns",
-    subtitle: "Data, patterns and predictions, explained simply.",
-    term: "Term 1",
-    objective: "Understand how large machine learning models learn from data patterns to make predictions.",
-    activity: "Train a Toy Model: Interactive classroom experiment demonstrating training data bias and accuracy.",
-    samplePrompt: "What is the difference between a search engine and a generative language model?",
-    skills: ["Data Literacy", "Algorithmic Logic"]
+    step: "02",
+    title: "Customized Program Design",
+    desc: "Agree on suitable modules, timetable integration, delivery model, and target student groups."
   },
   {
-    week: 3,
-    title: "Problem Decomposition",
-    subtitle: "Breaking large problems into clear, manageable steps.",
-    term: "Term 1",
-    objective: "Learn computational thinking by breaking complex assignments into actionable mini-tasks.",
-    activity: "Recipe for Problem Solving: Map out a school science project into 5 logical sub-tasks before using tech.",
-    samplePrompt: "Break down the task of creating a school recycling campaign into 6 sequential steps.",
-    skills: ["Problem Solving", "Logic & Planning"]
+    step: "03",
+    title: "Implementation",
+    desc: "Deliver structured sessions using guided activities, interactive discussions, exercises, and team projects."
   },
   {
-    week: 4,
-    title: "Asking Better Questions",
-    subtitle: "Framing specific requests with context and purpose.",
-    term: "Term 1",
-    objective: "Master prompt engineering principles: Context, Task, Role, Format, and Constraints (C-T-R-F-C).",
-    activity: "Prompt Transformation Challenge: Turn vague 3-word queries into rich, highly effective prompts.",
-    samplePrompt: "Act as a middle school science teacher. Quiz me on photosynthesis with 3 progressive multiple-choice questions.",
-    skills: ["Effective Questioning", "Communication"]
+    step: "04",
+    title: "Assessment",
+    desc: "Use age-appropriate baseline and end-of-program assessments where included in the agreed scope."
   },
   {
-    week: 5,
-    title: "AI for Learning",
-    subtitle: "Using AI to understand, practise and revise — not to copy.",
-    term: "Term 2",
-    objective: "Adopt AI as a personalized Socratic tutor rather than a shortcut answer generator.",
-    activity: "Socratic Study Partner: Practice getting AI to explain difficult math/physics concepts using analogies.",
-    samplePrompt: "Explain Newton's third law using a basketball analogy, then give me a practice scenario to solve.",
-    skills: ["Study Habits", "Independent Reasoning"]
+    step: "05",
+    title: "Student Showcase",
+    desc: "Give students an opportunity to present what they learned and demonstrate their team projects."
   },
   {
-    week: 6,
-    title: "Research with AI",
-    subtitle: "Gathering and organising information from several sources.",
-    term: "Term 2",
-    objective: "Synthesize background research efficiently while cross-referencing primary literature.",
-    activity: "Multi-Source Synthesizer: Compare AI research outlines against library encyclopedia entries.",
-    samplePrompt: "Summarize the key causes of renewable energy adoption in India, citing 3 major factors.",
-    skills: ["Information Literacy", "Synthesis"]
-  },
-  {
-    week: 7,
-    title: "AI Can Be Wrong",
-    subtitle: "Recognising errors, bias and made-up information.",
-    term: "Term 2",
-    objective: "Identify AI hallucinations, outdated training cutoffs, and socio-cultural biases in generated text.",
-    activity: "Hallucination Detective: Spot 3 deliberate errors hidden inside an AI-generated historical biography.",
-    samplePrompt: "Who won the Nobel Prize in Physics in 2029? (Tests AI awareness of future vs past factual limits).",
-    skills: ["Critical Thinking", "Bias Awareness"]
-  },
-  {
-    week: 8,
-    title: "Verification & Fact Checking",
-    subtitle: "Testing claims against reliable sources.",
-    term: "Term 2",
-    objective: "Apply lateral reading techniques and 3-step fact verification to any AI output.",
-    activity: "Claim Audit Sheet: Fact-check 5 statistical claims generated by an AI assistant using official portals.",
-    samplePrompt: "Provide the historical source citation for the quote: 'Knowledge is power' and verify its origin.",
-    skills: ["Verification", "Academic Integrity"]
-  },
-  {
-    week: 9,
-    title: "Creativity with AI",
-    subtitle: "Brainstorming and developing original ideas.",
-    term: "Term 3",
-    objective: "Leverage AI for rapid ideation, story drafting, and creative brainstorming while writing original text.",
-    activity: "Co-Creative Storyboarding: Co-author a futuristic sci-fi flash fiction story where AI suggests plot twists.",
-    samplePrompt: "Give me 5 unique story prompts combining climate change solutions with space exploration.",
-    skills: ["Creativity", "Ideation & Co-Creation"]
-  },
-  {
-    week: 10,
-    title: "AI + School Subjects",
-    subtitle: "Applying AI thoughtfully across the curriculum.",
-    term: "Term 3",
-    objective: "Apply responsible AI workflows in English, Science, Social Studies, Art, and Mathematics.",
-    activity: "Subject Integration Workshop: Use AI to construct interactive revision flashcards for upcoming exams.",
-    samplePrompt: "Help me create a study timeline for reviewing Indian History chapters over the next 14 days.",
-    skills: ["Cross-Curricular Application", "Productivity"]
-  },
-  {
-    week: 11,
-    title: "Team Problem-Solving Project",
-    subtitle: "Teams work on a real school or community problem.",
-    term: "Term 3",
-    objective: "Collaborate in student teams to research, design, and present a practical solution to a real issue.",
-    activity: "Community Impact Sprint: Teams design an AI-powered or tech-assisted community campaign.",
-    samplePrompt: "Help our student team outline a proposal to reduce food waste in our school cafeteria.",
-    skills: ["Collaboration", "Real-World Problem Solving"]
-  },
-  {
-    week: 12,
-    title: "Student Demo & Reflection",
-    subtitle: "Presenting projects and reflecting on responsible use.",
-    term: "Term 4",
-    objective: "Showcase final projects to school management, parents, and peers; earn MindPilot AI Readiness Certification.",
-    activity: "Grand Showcase & Pledge: Public presentation of team projects and signing the MindPilot Responsible AI Pledge.",
-    samplePrompt: "What are the 3 most important ethics guidelines you will follow when using AI in high school?",
-    skills: ["Presentation", "Ethical Reflection"]
+    step: "06",
+    title: "Review & Continuity",
+    desc: "Share a summary of participation and learning outcomes, discuss improvements, and plan future stages."
   }
 ];
 
-export const IMPLEMENTATION_STEPS = [
-  { num: "01", title: "School Coordination", desc: "Initial kickoff meeting with school leadership and academic coordinators." },
-  { num: "02", title: "Student Orientation", desc: "Engaging inaugural assembly introducing students to the program." },
-  { num: "03", title: "Structured Sessions", desc: "Weekly 45-minute interactive classroom modules led by certified facilitators." },
-  { num: "04", title: "Practical Activities", desc: "Hands-on exercises, prompt labs, and fact-checking challenges." },
-  { num: "05", title: "Projects", desc: "Team-based real-world problem solving sprints." },
-  { num: "06", title: "Assessment", desc: "Comprehensive baseline and post-program evaluation of student growth." },
-  { num: "07", title: "Student Showcase", desc: "Exhibition of student projects for parents, teachers, and leadership." },
-  { num: "08", title: "School Impact Report", desc: "Executive analytics report delivered to school management." }
+export const DELIVERY_FORMATS = [
+  { title: "Timetabled Classroom Sessions", desc: "Regular weekly 45-minute interactive periods integrated into the school timetable." },
+  { title: "Periodic Intensive Workshops", desc: "Multi-day hands-on bootcamps or term-based intensive sprints." },
+  { title: "Club / Enrichment Programs", desc: "After-school or weekend AI Innovation & Critical Thinking clubs." },
+  { title: "Term-Based Modules", desc: "Focused 4 to 6-week module packages designed for specific grade bands." },
+  { title: "Academic-Year Partnership", desc: "Comprehensive year-long program covering all 8 curriculum modules." },
+  { title: "Classroom Learning + Projects", desc: "Blended format combining classroom instruction with real-world team projects." }
 ];
 
 export const RESPONSIBILITIES = {
   school: [
-    "Student groups assignment",
-    "Classroom / suitable learning environment & AV setup",
-    "Designated School Coordinator liaison",
-    "Timetable integration & session coordination"
+    "Designated School Liaison / Coordinator for smooth execution",
+    "Suitable learning environment / classroom with AV or projection",
+    "Student group assignment and timetable scheduling",
+    "Facilitating student participation and institutional communication"
   ],
   programTeam: [
-    "Complete 12-week structured curriculum & workbooks",
-    "Certified Trainers & Facilitators",
-    "Digital & physical learning resources",
-    "Interactive student activities & assessments",
-    "Student certificates of completion",
-    "Teacher orientation & usage guidelines",
-    "Parent awareness workshops & resources",
-    "Comprehensive School Impact Analytics Report"
+    "Structured curriculum modules & age-appropriate student workbooks",
+    "Certified facilitators / trainers & master presentation materials",
+    "Interactive prompt exercises, hallucination labs & verification sheets",
+    "Baseline & post-program outcome measurement frameworks",
+    "Student completion certificates & showcase event support",
+    "Teacher awareness resources & classroom usage guidance",
+    "Parent communication guidelines & digital safety takeaway sheets",
+    "Executive School Partnership Learning & Participation Report"
   ]
 };
+
+export const FAQ_LIST = [
+  {
+    q: "What is the AI Readiness Program?",
+    a: "The AI Readiness & Responsible Technology Program is a structured educational initiative designed for school students. It teaches students how artificial intelligence works, how to ask better questions, how to verify AI-generated answers, how to solve problems, and how to use AI ethically without becoming dependent on it."
+  },
+  {
+    q: "Which grades can participate?",
+    a: "The program is designed for Grades 3 through 12, with customized learning tracks for each band (Grades 3–5: Discover AI; Grades 6–8: Understand & Question AI; Grades 9–10: Apply AI; Grades 11–12: Advanced Applications). Grades 6–10 are typically recommended for initial school implementation."
+  },
+  {
+    q: "Does a school need a computer lab?",
+    a: "No elaborate lab setup is required. The curriculum can be delivered in standard classrooms with a projector/screen or in existing computer labs. Sessions emphasize discussion, critical thinking, worksheets, and guided demonstrations."
+  },
+  {
+    q: "Do students need previous AI or coding knowledge?",
+    a: "No prior technical or coding experience is needed. The program focuses on AI literacy, computational thinking, prompt framing, verification habits, and ethics — accessible to every student regardless of technical background."
+  },
+  {
+    q: "How does the program fit into the school timetable?",
+    a: "Delivery is fully flexible and customized with school management. It can be scheduled as a weekly timetabled period (e.g. 45 mins/week), periodic term workshops, or a club enrichment program."
+  },
+  {
+    q: "How are student learning outcomes assessed?",
+    a: "Depending on agreed scope, we utilize age-appropriate baseline and end-of-program evaluations covering AI concept awareness, prompt quality, verification habits, and project demonstrations."
+  },
+  {
+    q: "How are responsible AI use and student safety addressed?",
+    a: "Child safety and data privacy are core pillars. We enforce strict data minimalization, select age-appropriate tools, teach personal data protection, and emphasize academic integrity."
+  },
+  {
+    q: "Can the curriculum be customized for our school?",
+    a: "Yes. Every school partnership is tailored to the institution's specific timetable, student count, infrastructure, grade focus, and academic priorities."
+  },
+  {
+    q: "Can the program be conducted across multiple grades?",
+    a: "Yes. Schools can choose to implement the program across a single grade band (e.g., Grades 6–8) or deploy tailored tracks simultaneously across multiple middle and high school grades."
+  },
+  {
+    q: "Is teacher orientation available?",
+    a: "Yes. We provide teacher orientation resources and guidelines so educators understand how students learn AI and how to maintain academic integrity in classroom assignments."
+  },
+  {
+    q: "What are the commercial terms?",
+    a: "Program scope and commercial terms are discussed directly with each institution. The final proposal is customized according to student strength, grade levels, delivery format, timetable, and agreed services. Contact our team to discuss your school's requirements."
+  },
+  {
+    q: "How can our school become a partner?",
+    a: "Principals, correspondents, or academic coordinators can click 'Discuss a School Partnership' on the site to submit an institutional enquiry. Our leadership team in Visakhapatnam will get in touch promptly."
+  }
+];
+
+export const PROMPT_LAB_EXAMPLES = [
+  {
+    id: 1,
+    title: "Homework & Science Revision",
+    weakPrompt: "Write an essay on photosynthesis for my biology homework.",
+    weakAnalysis: "Dependency Trap: Prompts AI to generate the entire assignment directly, resulting in zero comprehension or retention.",
+    strongPrompt: "Act as an interactive science tutor. Explain photosynthesis using a solar panel analogy, then ask me 2 questions to check my understanding.",
+    strongAnalysis: "Socratic Learning: Uses AI as an engaging study guide. Keeps cognitive ownership with the student.",
+    category: "Science & Study Skills"
+  },
+  {
+    id: 2,
+    title: "Research & Fact Verification",
+    weakPrompt: "Tell me everything about renewable energy in India.",
+    weakAnalysis: "Generic Query: Lacks context, grade focus, or specific analytical constraints.",
+    strongPrompt: "Summarize the top 3 factors driving solar power adoption in Andhra Pradesh. List 2 claims I should cross-check with official government reports.",
+    strongAnalysis: "Verification-Focused: Demands specific regional context and explicitly identifies claims for independent verification.",
+    category: "Social Studies & Research"
+  },
+  {
+    id: 3,
+    title: "Math & Logic Problem Solving",
+    weakPrompt: "Give me the answer to 3x + 15 = 45.",
+    weakAnalysis: "Short-term Answer: Retrieves raw numeric result without learning the solution logic.",
+    strongPrompt: "Guide me through solving 3x + 15 = 45 step by step. Explain step 1, then let me calculate step 2 before revealing the next step.",
+    strongAnalysis: "Decomposition & Active Learning: Breaks problem into guided steps, encouraging active student calculation.",
+    category: "Mathematics"
+  }
+];
 
 export const IMPACT_METRICS = [
   { name: "AI Awareness", before: 52, after: 88, unit: "/100" },
@@ -279,7 +339,7 @@ export const IMPACT_METRICS = [
   { name: "Verification Skills", before: 38, after: 84, unit: "/100" },
   { name: "Responsible AI Understanding", before: 56, after: 90, unit: "/100" },
   { name: "Problem Solving", before: 60, after: 80, unit: "/100" },
-  { name: "Practical Application", before: 50, after: 85, unit: "/100" },
+  { name: "Practical Application", before: 50, after: 85, unit: "/100" }
 ];
 
 export const OVERALL_BENCHMARK = {
@@ -288,103 +348,3 @@ export const OVERALL_BENCHMARK = {
   percentageGain: "+44.4%"
 };
 
-export const VALUE_PROPOSITIONS = [
-  { num: "01", title: "Future Readiness", desc: "Prepare students for an increasingly AI-driven workforce and higher education ecosystem." },
-  { num: "02", title: "Responsible Technology", desc: "Empower students to understand ethical boundaries, privacy laws, and safe digital behavior." },
-  { num: "03", title: "Critical Thinking", desc: "Strengthen independent reasoning, fact verification, and analytical rigor over passive consumption." },
-  { num: "04", title: "Parent Confidence", desc: "Provide families with clear, structured guidance on safe home technology usage." },
-  { num: "05", title: "School Differentiation", desc: "Position your institution as a forward-thinking pioneer in AI-ready education." }
-];
-
-export const PROMPT_LAB_EXAMPLES = [
-  {
-    id: 1,
-    title: "Homework Assistance",
-    weakPrompt: "Write a summary of the French Revolution for my history class.",
-    weakAnalysis: "Dependency Trap: Prompts AI to generate the final homework product directly, leading to copy-paste submission and zero learning.",
-    strongPrompt: "Act as an interactive history tutor. Outline the top 3 causes of the French Revolution, then ask me 2 analytical questions to test if I understand.",
-    strongAnalysis: "Socratic Learning: Positions AI as a study guide. Encourages critical reasoning and self-testing while preserving student ownership.",
-    category: "Study Skills"
-  },
-  {
-    id: 2,
-    title: "Science Project Ideation",
-    weakPrompt: "Give me a science project topic that will get an A.",
-    weakAnalysis: "Generic Query: Lacks context, grade level, available materials, or personal interests.",
-    strongPrompt: "I am an 8th grader interested in renewable energy. Suggest 3 hands-on physics experiment ideas using household items, with hypotheses I can test.",
-    strongAnalysis: "Precision Prompting: Includes role, constraints, grade level, topic area, and specific format requirements.",
-    category: "Science & Creativity"
-  },
-  {
-    id: 3,
-    title: "Coding & Math Problem Solving",
-    weakPrompt: "Solve this quadratic equation for me: 2x^2 + 5x - 12 = 0",
-    weakAnalysis: "Short-term Answer: Provides raw answer without demonstrating step-by-step breakdown.",
-    strongPrompt: "Explain the steps to solve 2x^2 + 5x - 12 = 0 using factoring. Show step 1 first, then ask me to calculate step 2.",
-    strongAnalysis: "Guided Decomposition: Asks AI to guide through step-by-step problem breakdown.",
-    category: "STEM"
-  }
-];
-
-export const QUIZ_QUESTIONS = [
-  {
-    id: 1,
-    question: "When using AI for a school research assignment, what is the most responsible approach?",
-    options: [
-      "Copy the AI response directly into your report to save time.",
-      "Use AI to generate ideas and outlines, but write the text yourself and verify facts using reliable primary sources.",
-      "Ask AI to write the essay and just change a few words.",
-      "Avoid using any technology at all."
-    ],
-    correct: 1,
-    explanation: "AI should serve as your research assistant and brainstorming companion, not your replacement. Always verify facts against primary sources!"
-  },
-  {
-    id: 2,
-    question: "What does an AI 'hallucination' refer to?",
-    options: [
-      "When an AI displays colorful graphics on screen.",
-      "When an AI confidently presents incorrect, fabricated, or made-up information as fact.",
-      "When the server experiences slowdown.",
-      "When an AI robot moves physically."
-    ],
-    correct: 1,
-    explanation: "AI models generate text based on statistical probabilities, not true understanding. They can sometimes generate plausible-sounding falsehoods called hallucinations!"
-  },
-  {
-    id: 3,
-    question: "Which prompt demonstrates the best critical thinking and inquiry style?",
-    options: [
-      "Do my physics homework now.",
-      "What is gravity?",
-      "Act as a physics tutor. Explain how gravity affects planetary orbits using a trampoline analogy, then quiz me with one thought experiment.",
-      "Write 500 words on gravity."
-    ],
-    correct: 2,
-    explanation: "Effective prompts set a clear role, request engaging explanations (analogies), and incorporate active learning (quizzing the student)."
-  },
-  {
-    id: 4,
-    question: "Why should you never share your personal address, school passwords, or private family details with AI chatbots?",
-    options: [
-      "AI chatbots get confused by numbers.",
-      "Data sent to online AI models may be stored, analyzed, or used in training datasets, posing privacy risks.",
-      "It makes the AI answer too slowly.",
-      "The AI will automatically phone your parents."
-    ],
-    correct: 1,
-    explanation: "Protecting personal privacy is a fundamental pillar of Responsible AI usage. Never share sensitive PII or credentials with AI systems!"
-  },
-  {
-    id: 5,
-    question: "What is the primary mission of the MindPilot AI Program?",
-    options: [
-      "To teach students how to rely on AI for everything.",
-      "To ban AI from all classrooms permanently.",
-      "To build AI-literate students who know how to use AI effectively without becoming dependent on it.",
-      "To replace human teachers with automated AI robots."
-    ],
-    correct: 2,
-    explanation: "MindPilot empowers students to think better WITH AI while developing independent critical reasoning and academic integrity."
-  }
-];

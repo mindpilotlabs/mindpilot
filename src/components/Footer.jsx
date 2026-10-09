@@ -1,130 +1,116 @@
 import React from 'react';
 import { 
-  Phone, 
+  Building2, 
   Mail, 
+  Phone, 
   MapPin, 
   ShieldCheck, 
   Heart, 
-  ArrowUp, 
-  Sparkles,
-  School,
-  Bot
+  ArrowUp,
+  BookOpen
 } from 'lucide-react';
 import { MIND_PILOT_INFO } from '../data/mindpilotData';
 
-export default function Footer({ setActiveTab, openProposalModal }) {
+export default function Footer({ setActiveTab }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  return (
-    <footer className="bg-white border-t border-slate-200 text-slate-600 pt-8 pb-6 relative overflow-hidden shadow-xs mt-auto">
-      
-      {/* Light Background Glow Effects */}
-      <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none"></div>
+  const handleNavClick = (tab) => {
+    setActiveTab(tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+  return (
+    <footer className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-800/80 font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+        {/* Top Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80">
           
-          {/* Brand & Mission (5 cols) */}
-          <div className="md:col-span-5 space-y-2">
-            <div className="flex items-center gap-2.5">
+          {/* Col 1: Brand Logo & Mission */}
+          <div className="lg:col-span-4 space-y-5">
+            <div className="flex items-center gap-3 cursor-pointer group" onClick={() => handleNavClick('home')}>
               <img 
                 src="/logo.png" 
                 alt="MindPilot Logo" 
-                className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-xs" 
+                className="h-24 sm:h-28 lg:h-32 w-auto object-contain bg-white/10 p-2.5 rounded-2xl border border-white/15 backdrop-blur-md transition-transform group-hover:scale-105 filter drop-shadow-lg" 
               />
             </div>
-
-            <p className="text-xs text-slate-600 leading-normal max-w-md font-medium">
-              "{MIND_PILOT_INFO.mission}"
+            
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm font-medium">
+              {MIND_PILOT_INFO.mission}
             </p>
+
+            <div className="inline-block px-3 py-1.5 rounded-xl bg-teal-500/10 text-teal-300 border border-teal-500/20 text-xs font-extrabold tracking-wide">
+              Primary Launch Market: {MIND_PILOT_INFO.primaryMarket}
+            </div>
           </div>
 
-          {/* Navigation Links (3 cols) */}
-          <div className="md:col-span-3 space-y-2">
-            <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
-              Navigation
-            </h4>
-            <ul className="space-y-1.5 text-xs font-semibold">
-              {[
-                { id: 'overview', label: 'Program Overview' },
-                { id: 'curriculum', label: '12-Week Quest Syllabus' },
-                { id: 'ailab', label: 'Interactive Student AI Lab' },
-                { id: 'impact', label: 'Impact Metrics (54 → 78)' },
-                { id: 'calculator', label: 'School Plans & Grade Bands' },
-              ].map((link) => (
-                <li key={link.id}>
-                  <button
-                    onClick={() => setActiveTab(link.id)}
-                    className="hover:text-indigo-600 transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
+          {/* Col 2: Navigation Links */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-xs font-heading font-extrabold text-white uppercase tracking-widest text-indigo-400">Explore Program</h4>
+            <ul className="space-y-2.5 text-xs font-semibold">
+              <li><button onClick={() => handleNavClick('home')} className="hover:text-white transition-colors flex items-center gap-1.5">Home</button></li>
+              <li><button onClick={() => handleNavClick('program')} className="hover:text-white transition-colors flex items-center gap-1.5">About The Program</button></li>
+              <li><button onClick={() => handleNavClick('curriculum')} className="hover:text-white transition-colors flex items-center gap-1.5">8-Module Curriculum</button></li>
+              <li><button onClick={() => handleNavClick('schools')} className="hover:text-white transition-colors flex items-center gap-1.5">For Schools & Leadership</button></li>
+              <li><button onClick={() => handleNavClick('students')} className="hover:text-white transition-colors flex items-center gap-1.5">For Students & AI Lab</button></li>
+              <li><button onClick={() => handleNavClick('teachers-parents')} className="hover:text-white transition-colors flex items-center gap-1.5">Teachers & Parents</button></li>
             </ul>
           </div>
 
-          {/* Contact Details (4 cols) */}
-          <div className="md:col-span-4 glass-card p-4 rounded-2xl border border-slate-200 bg-slate-50 space-y-2 shadow-xs">
-            <div className="flex items-center justify-between">
-              <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
-                Leadership Contact
-              </h4>
-              <span className="text-[10px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">
-                {MIND_PILOT_INFO.contact.role}
-              </span>
-            </div>
+          {/* Col 3: Institutional & Safety */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-xs font-heading font-extrabold text-white uppercase tracking-widest text-indigo-400">Safety & Policy</h4>
+            <ul className="space-y-2.5 text-xs font-semibold">
+              <li><button onClick={() => handleNavClick('responsible-ai')} className="hover:text-white transition-colors flex items-center gap-1.5">Responsible AI & Safety</button></li>
+              <li><button onClick={() => handleNavClick('impact')} className="hover:text-white transition-colors flex items-center gap-1.5">Impact & Assessment</button></li>
+              <li><button onClick={() => handleNavClick('faq')} className="hover:text-white transition-colors flex items-center gap-1.5">FAQ & Commercial Scope</button></li>
+              <li><button onClick={() => handleNavClick('resources')} className="hover:text-white transition-colors flex items-center gap-1.5">Resources & Downloads</button></li>
+              <li><button onClick={() => handleNavClick('contact')} className="hover:text-white transition-colors flex items-center gap-1.5">Partnership Enquiry</button></li>
+            </ul>
+          </div>
 
-            <h5 className="text-xs font-black text-slate-900">{MIND_PILOT_INFO.contact.ceo}</h5>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-1.5 border-t border-slate-200 text-[11px] font-medium text-slate-700">
-              <div className="flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
-                <a href={`tel:${MIND_PILOT_INFO.contact.phone}`} className="hover:text-indigo-600 font-bold">
-                  {MIND_PILOT_INFO.contact.phone}
-                </a>
+          {/* Col 4: Contact Leadership */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-xs font-heading font-extrabold text-white uppercase tracking-widest text-indigo-400">School Partnerships Contact</h4>
+            <div className="space-y-2.5 text-xs text-slate-300 font-medium">
+              <p className="font-bold text-white text-sm">{MIND_PILOT_INFO.contact.ceo}</p>
+              <p className="text-[11px] text-teal-400 font-extrabold uppercase tracking-wider">{MIND_PILOT_INFO.contact.role}</p>
+              <div className="flex items-center gap-2.5 pt-1">
+                <Mail className="w-4 h-4 text-teal-400 shrink-0" />
+                <a href={`mailto:${MIND_PILOT_INFO.contact.email}`} className="hover:text-white transition-colors">{MIND_PILOT_INFO.contact.email}</a>
               </div>
-
-              <div className="flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
-                <a href={`mailto:${MIND_PILOT_INFO.contact.email}`} className="hover:text-indigo-600 truncate font-semibold">
-                  {MIND_PILOT_INFO.contact.email}
-                </a>
+              <div className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-teal-400 shrink-0" />
+                <a href={`tel:${MIND_PILOT_INFO.contact.phone}`} className="hover:text-white transition-colors">{MIND_PILOT_INFO.contact.phone}</a>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
+                <span>{MIND_PILOT_INFO.contact.location}</span>
               </div>
             </div>
-
-            <button
-              onClick={openProposalModal}
-              className="w-full mt-1 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xs shadow-xs transition-all flex items-center justify-center gap-1.5"
-            >
-              <School className="w-3.5 h-3.5" />
-              <span>Request School Proposal</span>
-            </button>
           </div>
 
         </div>
 
-        {/* Compact Disclaimer Note */}
-        <div className="py-2 px-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
-          <p className="text-[10px] text-slate-500 leading-tight font-medium">
-            *Independent student-development initiative. Does not claim board affiliation, government endorsement, or formal accreditation.
-          </p>
-        </div>
+        {/* Bottom Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-400">
+          <div>
+            © 2026 MindPilot Education. All rights reserved. Visakhapatnam, Andhra Pradesh.
+          </div>
 
-        {/* Bottom copyright & back to top */}
-        <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-          <span>© {new Date().getFullYear()} MindPilot Education. All rights reserved.</span>
-
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-1 hover:text-indigo-600 transition-colors"
-          >
-            <span>Back to top</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          <div className="flex items-center gap-4">
+            <button onClick={() => handleNavClick('responsible-ai')} className="hover:text-white transition-colors">
+              Child Safety & Privacy Statement
+            </button>
+            <span>•</span>
+            <button onClick={scrollToTop} className="flex items-center gap-1 hover:text-white transition-colors">
+              <span>Back to Top</span>
+              <ArrowUp className="w-4 h-4 text-teal-400" />
+            </button>
+          </div>
         </div>
 
       </div>
